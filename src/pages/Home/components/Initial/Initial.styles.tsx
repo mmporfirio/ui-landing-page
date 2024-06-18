@@ -4,7 +4,6 @@ const Container = styled.div`
   position: relative;
   padding-top: 34px;
   padding-inline: 98px;
-  margin-bottom: 50px;
   height: 100vh;
 `;
 
@@ -146,6 +145,7 @@ export type CoinImgProps = {
 
 const CoinImg = styled.img<CoinImgProps>`
   position: absolute;
+  z-index: -10;
 
   ${({ height, opacity, top, bottom, right, left }) => ({
     height: `${height}px`,
