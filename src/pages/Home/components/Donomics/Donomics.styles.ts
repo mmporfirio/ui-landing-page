@@ -6,7 +6,6 @@ const Container = styled.section`
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-bottom: 5%;
 `;
 
 const Card = styled.div<{ borderLeftColor?: string }>`

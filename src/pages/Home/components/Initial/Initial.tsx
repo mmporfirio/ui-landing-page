@@ -1,4 +1,5 @@
 import { BabyDon, Coin, LogoBrandName } from "../../../../assets/images";
+import { NAV_ITEMS } from "../../Home.constants";
 import { COINS_POSITIONS } from "./Initial.constants";
 
 import {
@@ -17,8 +18,6 @@ import {
   NavItem,
   RightBlurBackground,
 } from "./Initial.styles";
-
-const NAV_ITEMS = ["Home", "About Us", "Partners", "Donomics"];
 
 function Initial() {
   return (
