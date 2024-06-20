@@ -21,7 +21,7 @@ const BabyImg = styled.img<{ reverse?: boolean }>`
   height: 400px;
   padding-left: 18%;
   ${(props) =>
-    props.reverse &&
+    props?.reverse &&
     css`
       padding-right: 18%;
       justify-self: end;

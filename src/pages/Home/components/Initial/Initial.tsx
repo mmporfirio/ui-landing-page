@@ -27,7 +27,7 @@ function Initial() {
         <LogoNameImg src={LogoBrandName} alt="Logo name" />
         <NavBar>
           {NAV_ITEMS.map((title) => (
-            <NavItem>{title}</NavItem>
+            <NavItem key={title}>{title}</NavItem>
           ))}
         </NavBar>
         <CallButton>Join now</CallButton>
@@ -38,8 +38,8 @@ function Initial() {
           <CallButton>Join now</CallButton>
           <AuditButton>Audit</AuditButton>
         </ButtonsContainer>
-        {COINS_POSITIONS.map((props) => (
-          <CoinImg src={Coin} {...props} />
+        {COINS_POSITIONS.map((props, index) => (
+          <CoinImg src={Coin} {...props} key={index} />
         ))}
       </ContentContainer>
       <MiddleBlurBackground />

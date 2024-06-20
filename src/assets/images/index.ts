@@ -9,3 +9,4 @@ export { default as DEXView } from "./DEXView.png";
 export { default as Revolution } from "./Revolution.png";
 export { default as CoinGecko } from "./CoinGecko.png";
 export { default as CoinMarketCap } from "./CoinMarketCap.png";
+export { default as CharDonomics } from "./CharDonomics.png";

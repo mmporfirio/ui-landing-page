@@ -25,8 +25,8 @@ function Partners() {
           <BabyName>BABY DON</BabyName>
         </BabyBrandContainer>
         <InnerCircleContainer />
-        {PARTNERS_LIST.map(({ src, ...props }) => (
-          <PartnerCard {...props}>
+        {PARTNERS_LIST.map(({ src, ...props }, index) => (
+          <PartnerCard {...props} key={index}>
             <PartnerImg src={src} />
           </PartnerCard>
         ))}

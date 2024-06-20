@@ -46,8 +46,8 @@ function About() {
         </TextContainer>
         <BabyImg src={Baby} reverse />
       </ContentContainer>
-      {COINS_POSITIONS.map((props) => (
-        <CoinImg src={Coin} {...props} />
+      {COINS_POSITIONS.map((props, index) => (
+        <CoinImg src={Coin} {...props} key={index} />
       ))}
       <LeftBlurBackground />
       <LeftTopBlurBackground />
