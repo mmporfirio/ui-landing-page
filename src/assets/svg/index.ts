@@ -1,2 +1,2 @@
 export * from "./PaperPlaneIcon";
-export * from "./XIcon";
+export * from "./XTwitterIcon";

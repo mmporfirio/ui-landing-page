@@ -1,5 +1,6 @@
 import { BabyDon, Coin, LogoBrandName } from "../../../../assets/images";
 import { NavigationItem } from "../../Home.constants";
+import MobileMenu from "../MobileMenu/MobileMenu";
 import { COINS_POSITIONS } from "./Initial.constants";
 
 import {
@@ -14,6 +15,7 @@ import {
   LeftBlurBackground,
   LogoNameImg,
   MiddleBlurBackground,
+  MobileMenuContainer,
   NavBar,
   NavItem,
   RightBlurBackground,
@@ -26,6 +28,9 @@ type InitialProps = {
 function Initial({ refProp, menuItems }: InitialProps) {
   return (
     <Container ref={refProp}>
+      <MobileMenuContainer>
+        <MobileMenu menuItems={menuItems} />
+      </MobileMenuContainer>
       <HeaderContainer>
         <LogoNameImg src={LogoBrandName} alt="Logo name" />
         <NavBar>

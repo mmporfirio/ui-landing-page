@@ -1,6 +1,6 @@
 import { LogoBrandName } from "../../../../assets/images";
 import PaperPlaneIcon from "../../../../assets/svg/PaperPlaneIcon";
-import XIcon from "../../../../assets/svg/XIcon";
+import XIcon from "../../../../assets/svg/XTwitterIcon";
 import { NavigationItem } from "../../Home.constants";
 import {
   Container,

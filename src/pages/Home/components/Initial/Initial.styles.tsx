@@ -10,12 +10,33 @@ const Container = styled.div`
 const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 960px) {
+    justify-content: center;
+    & > button {
+      display: none !important;
+    }
+  }
 `;
 
 const NavBar = styled.nav`
   display: flex;
   align-items: center;
   gap: 54px;
+  @media (max-width: 1105px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 960px) {
+    display: none !important;
+  }
+`;
+
+const MobileMenuContainer = styled.div`
+  display: none;
+  @media (max-width: 960px) {
+    display: block;
+  }
 `;
 
 const NavItem = styled.a`
@@ -65,7 +86,7 @@ const ContentContainer = styled.div`
 `;
 
 const ContentImg = styled.img`
-  width: 70%;
+  height: 40vw;
 `;
 
 const RightBlurBackground = styled.div`
@@ -172,4 +193,5 @@ export {
   RightBlurBackground,
   MiddleBlurBackground,
   CoinImg,
+  MobileMenuContainer,
 };
