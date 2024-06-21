@@ -15,9 +15,13 @@ import {
   TopRightBlurBackground,
 } from "./Partners.styles";
 
-function Partners() {
+type PartnersProps = {
+  refProp: React.MutableRefObject<HTMLDivElement | null>;
+};
+
+function Partners({ refProp }: PartnersProps) {
   return (
-    <Container>
+    <Container ref={refProp}>
       <h2>Partners</h2>
       <CircleContainer>
         <BabyBrandContainer>

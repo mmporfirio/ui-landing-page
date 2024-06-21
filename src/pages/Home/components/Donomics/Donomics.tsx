@@ -11,9 +11,12 @@ import {
   TaxesContainer,
 } from "./Donomics.styles";
 
-function Donomics() {
+type DonomicsProps = {
+  refProp: React.MutableRefObject<HTMLDivElement | null>;
+};
+function Donomics({ refProp }: DonomicsProps) {
   return (
-    <Container>
+    <Container ref={refProp}>
       <h2>Donomics</h2>
       <Card>
         <CharImg src={CharDonomics} alt="Donomics Char" />

@@ -1,7 +1,7 @@
 import { LogoBrandName } from "../../../../assets/images";
 import PaperPlaneIcon from "../../../../assets/svg/PaperPlaneIcon";
 import XIcon from "../../../../assets/svg/XIcon";
-import { NAV_ITEMS } from "../../Home.constants";
+import { NavigationItem } from "../../Home.constants";
 import {
   Container,
   FlexContainer,
@@ -11,15 +11,19 @@ import {
   NavItem,
   RightBlurBackground,
 } from "./Footer.styles";
-
-function Footer() {
+type FooterProps = {
+  menuItems: NavigationItem[];
+};
+function Footer({ menuItems }: FooterProps) {
   return (
     <Container>
       <FlexContainer>
         <LogoBrandImg src={LogoBrandName} />
         <NavBar>
-          {NAV_ITEMS.map((title) => (
-            <NavItem key={title}>{title}</NavItem>
+          {menuItems.map(({ label, onClick }) => (
+            <NavItem key={label} onClick={() => onClick()}>
+              {label}
+            </NavItem>
           ))}
         </NavBar>
       </FlexContainer>

@@ -1,5 +1,5 @@
 import { BabyDon, Coin, LogoBrandName } from "../../../../assets/images";
-import { NAV_ITEMS } from "../../Home.constants";
+import { NavigationItem } from "../../Home.constants";
 import { COINS_POSITIONS } from "./Initial.constants";
 
 import {
@@ -19,14 +19,20 @@ import {
   RightBlurBackground,
 } from "./Initial.styles";
 
-function Initial() {
+type InitialProps = {
+  refProp: React.MutableRefObject<HTMLDivElement | null>;
+  menuItems: NavigationItem[];
+};
+function Initial({ refProp, menuItems }: InitialProps) {
   return (
-    <Container>
+    <Container ref={refProp}>
       <HeaderContainer>
         <LogoNameImg src={LogoBrandName} alt="Logo name" />
         <NavBar>
-          {NAV_ITEMS.map((title) => (
-            <NavItem key={title}>{title}</NavItem>
+          {menuItems.map(({ label, onClick }) => (
+            <NavItem key={label} onClick={() => onClick()}>
+              {label}
+            </NavItem>
           ))}
         </NavBar>
         <CallButton>Join now</CallButton>

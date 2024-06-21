@@ -11,9 +11,13 @@ import {
   TextContainer,
 } from "./About.styles";
 
-function About() {
+type AboutProps = {
+  refProp: React.MutableRefObject<HTMLDivElement | null>;
+};
+
+function About({ refProp }: AboutProps) {
   return (
-    <Container>
+    <Container ref={refProp}>
       <h2>ABOUT BABYDON</h2>
       <ContentContainer>
         <BabyImg src={Baby} />
