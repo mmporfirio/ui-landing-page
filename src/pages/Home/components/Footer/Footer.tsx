@@ -1,4 +1,4 @@
-import { LogoBrandName } from "../../../../assets/images";
+import { Logo, LogoBrandName } from "../../../../assets/images";
 import PaperPlaneIcon from "../../../../assets/svg/PaperPlaneIcon";
 import XIcon from "../../../../assets/svg/XTwitterIcon";
 import { NavigationItem } from "../../Home.constants";
@@ -18,7 +18,11 @@ function Footer({ menuItems }: FooterProps) {
   return (
     <Container>
       <FlexContainer>
-        <LogoBrandImg src={LogoBrandName} />
+        <picture>
+          <source media="(min-width: 845px)" srcSet={LogoBrandName} />
+          <source media="(max-width: 844px)" srcSet={Logo} />
+          <LogoBrandImg src={LogoBrandName} />
+        </picture>
         <NavBar>
           {menuItems.map(({ label, onClick }) => (
             <NavItem key={label} onClick={() => onClick()}>

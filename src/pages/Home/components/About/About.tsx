@@ -34,7 +34,7 @@ function About({ refProp }: AboutProps) {
           </p>
         </TextContainer>
       </ContentContainer>
-      <ContentContainer>
+      <ContentContainer reverse>
         <TextContainer>
           <p>
             Volume and hype had died down in the last years within our chain

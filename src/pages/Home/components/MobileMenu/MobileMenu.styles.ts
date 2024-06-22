@@ -31,7 +31,7 @@ const MenuItemsContainer = styled.div`
 
 const MenuItem = styled.a`
   color: #000;
-  font-size: 32px;
+  font-size: clamp(0.5rem, 10vw, 1.5rem);
 `;
 
 const Line = styled.hr`

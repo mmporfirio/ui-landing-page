@@ -5,21 +5,31 @@ const Container = styled.section`
   min-height: 100vh;
   text-align: center;
   padding-inline: 7%;
-  margin-bottom: 50px;
 `;
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.div<{ reverse?: boolean }>`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
   align-items: center;
   width: 100%;
   padding-bottom: 2%;
+
+  @media (max-width: 724px) {
+    display: flex;
+    flex-direction: column;
+    ${(props) =>
+      props?.reverse &&
+      css`
+        flex-direction: column-reverse;
+      `}
+  }
 `;
 
 const BabyImg = styled.img<{ reverse?: boolean }>`
   height: 400px;
   padding-left: 18%;
+
   ${(props) =>
     props?.reverse &&
     css`
@@ -27,6 +37,10 @@ const BabyImg = styled.img<{ reverse?: boolean }>`
       justify-self: end;
       transform: scaleX(-1);
     `}
+
+  @media (max-width: 724px) {
+    padding-inline: 0;
+  }
 `;
 
 const TextContainer = styled.div`

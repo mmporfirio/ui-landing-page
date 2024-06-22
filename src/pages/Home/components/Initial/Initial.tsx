@@ -1,4 +1,10 @@
-import { BabyDon, Coin, LogoBrandName } from "../../../../assets/images";
+import {
+  BabyDon,
+  BabyDonMobile,
+  Coin,
+  Logo,
+  LogoBrandName,
+} from "../../../../assets/images";
 import { NavigationItem } from "../../Home.constants";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { COINS_POSITIONS } from "./Initial.constants";
@@ -32,7 +38,11 @@ function Initial({ refProp, menuItems }: InitialProps) {
         <MobileMenu menuItems={menuItems} />
       </MobileMenuContainer>
       <HeaderContainer>
-        <LogoNameImg src={LogoBrandName} alt="Logo name" />
+        <picture>
+          <source media="(min-width: 361px)" srcSet={LogoBrandName} />
+          <source media="(max-width: 360px)" srcSet={Logo} />
+          <LogoNameImg src={LogoBrandName} alt="Logo name" />
+        </picture>
         <NavBar>
           {menuItems.map(({ label, onClick }) => (
             <NavItem key={label} onClick={() => onClick()}>
@@ -43,7 +53,11 @@ function Initial({ refProp, menuItems }: InitialProps) {
         <CallButton>Join now</CallButton>
       </HeaderContainer>
       <ContentContainer>
-        <ContentImg src={BabyDon} alt="Baby Don Image" />
+        <picture>
+          <source media="(min-width: 561px)" srcSet={BabyDon} />
+          <source media="(max-width: 560px)" srcSet={BabyDonMobile} />
+          <ContentImg src={BabyDon} alt="Baby Don Image" />
+        </picture>
         <ButtonsContainer>
           <CallButton>Join now</CallButton>
           <AuditButton>Audit</AuditButton>

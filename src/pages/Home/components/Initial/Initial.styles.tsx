@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Container = styled.div`
   position: relative;
   padding-top: 34px;
-  padding-inline: 98px;
+  padding-inline: 5vw;
   height: 100vh;
 `;
 
@@ -16,6 +16,9 @@ const HeaderContainer = styled.header`
     & > button {
       display: none !important;
     }
+  }
+  @media (max-width: 360px) {
+    justify-content: start;
   }
 `;
 
@@ -86,7 +89,10 @@ const ContentContainer = styled.div`
 `;
 
 const ContentImg = styled.img`
-  height: 40vw;
+  width: 60vw;
+  @media (max-width: 560px) {
+    width: 85vw;
+  }
 `;
 
 const RightBlurBackground = styled.div`
@@ -160,7 +166,7 @@ export type CoinImgProps = {
   bottom?: string;
   right?: string;
   left?: string;
-  height: number;
+  height: number | string;
   opacity: number;
 };
 
@@ -168,14 +174,14 @@ const CoinImg = styled.img<CoinImgProps>`
   position: absolute;
   z-index: -10;
 
-  ${({ height, opacity, top, bottom, right, left }) => ({
-    height: `${height}px`,
-    opacity: opacity.toString(),
-    ...(top && { top: top }),
-    ...(bottom && { bottom: bottom }),
-    ...(right && { right: right }),
-    ...(left && { left: left }),
-  })}
+  ${({ height, opacity, top, bottom, right, left }) => css`
+    height: ${typeof height === "number" ? `${height}px` : height};
+    opacity: ${opacity ?? 1};
+    top: ${top || "unset"};
+    bottom: ${bottom ?? "unset"};
+    right: ${right ?? "unset"};
+    left: ${left ?? "unset"};
+  `}
 `;
 
 export {

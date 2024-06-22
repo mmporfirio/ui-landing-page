@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Container = styled.section`
   position: relative;
@@ -26,23 +26,35 @@ const Card = styled.div<{ borderLeftColor?: string }>`
 
   ${(props) =>
     props.borderLeftColor &&
-    `
-    border-left: 0.5rem solid ${props.borderLeftColor}; 
+    css`
+      border-left: 0.5rem solid ${props.borderLeftColor};
     `}
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const CharImg = styled.img`
   width: 60%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const TaxesContainer = styled.div`
   display: grid;
-  gap: 2%;
+  gap: 25px;
   width: 40%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const CardText = styled.span`
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.5rem);
   font-weight: 500;
 `;
 

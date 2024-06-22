@@ -6,28 +6,51 @@ const Container = styled.footer`
 
   height: 15vh;
   padding: 8%;
+  margin-bottom: 20%;
 `;
 
 const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 5vw;
+
+  & > p {
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+  }
+
+  svg {
+    width: 2vw;
+    min-width: 15px;
+    height: fit-content;
+    margin-left: 15px;
+  }
+
+  @media (max-width: 724px) {
+    gap: 0;
+  }
 `;
 
 const LogoBrandImg = styled.img`
-  width: 20%;
+  width: 60%;
+  min-width: 55px;
+  @media (max-width: 724px) {
+    display: none;
+  }
 `;
 
 const NavBar = styled.nav`
   display: flex;
   align-items: center;
-  gap: 54px;
+  gap: 5vw;
 `;
 
 const NavItem = styled.a`
-  font-size: 25px;
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
+
   font-weight: 400;
   color: var(--paragraph-color);
+  white-space: nowrap;
   &:hover {
     color: #fff;
   }
@@ -35,10 +58,14 @@ const NavItem = styled.a`
 
 const FooterText = styled.span`
   color: var(--paragraph-color);
-  font-size: 24px;
+  font-size: clamp(0.5rem, 2.5vw, 1.5rem);
   display: inline-block;
   max-width: 40%;
   padding-block: 1%;
+
+  @media (max-width: 724px) {
+    max-width: 100%;
+  }
 `;
 
 const RightBlurBackground = styled.div`

@@ -14,9 +14,9 @@ export const COINS_POSITIONS: CoinImgProps[] = [
     opacity: 0.9,
   },
   {
-    height: 155,
+    height: "19vh",
     right: "7%",
-    opacity: 1,
+    opacity: 0.4,
   },
   {
     height: 130,

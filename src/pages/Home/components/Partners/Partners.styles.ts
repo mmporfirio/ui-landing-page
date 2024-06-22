@@ -1,20 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Container = styled.section`
-  padding-top: 15%;
-  margin-bottom: 20%;
   position: relative;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10%;
 `;
 
 const CircleContainer = styled.div`
   position: relative;
   width: 50%;
+  margin-top: 2%;
   padding-bottom: 50%;
   border-radius: 50%;
   background-color: transparent;
@@ -24,6 +21,19 @@ const CircleContainer = styled.div`
     5px 5px 300px 50px rgba(32, 121, 254, 0.75);
   box-shadow: inset 4px 4px 300px 0px #2079fe,
     5px 5px 300px 50px rgba(32, 121, 254, 0.75);
+
+  @media (max-width: 724px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    border: none;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+
+    width: auto;
+    padding-bottom: 5%;
+  }
 `;
 
 const InnerCircleContainer = styled.div`
@@ -34,6 +44,10 @@ const InnerCircleContainer = styled.div`
   top: -5%;
   bottom: -5%;
   border-radius: 50%;
+
+  @media (max-width: 724px) {
+    display: none;
+  }
 `;
 
 export type PartnerCardProps = {
@@ -61,22 +75,32 @@ const PartnerCard = styled.div<PartnerCardProps>`
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding-inline: 2%;
 
-  top: ${(props) => props.top || "unset"};
-  left: ${(props) => props.left || "unset"};
-  right: ${(props) => props.right || "unset"};
-  bottom: ${(props) => props.bottom || "unset"};
+  ${(props) => css`
+    top: ${props.top || "unset"};
+    left: ${props.left || "unset"};
+    right: ${props.right || "unset"};
+    bottom: ${props.bottom || "unset"};
+  `}
+
+  @media (max-width: 724px) {
+    position: unset;
+    height: 92px;
+    width: 80vw;
+  }
 `;
 
 const PartnerImg = styled.img`
-  width: 100%;
+  max-height: 90%;
+  max-width: 100%;
 `;
 
 const BabyImg = styled.img`
-  width: 40%;
+  width: 5vw;
 `;
 
 const BabyName = styled.span`
-  font-size: 3.5em;
+  white-space: nowrap;
+  font-size: clamp(1rem, 5vw, 2rem);
   font-weight: 800;
   color: var(--primary-color);
 `;
@@ -86,8 +110,13 @@ const BabyBrandContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  left: 30%;
-  bottom: 45%;
+
+  margin-left: 40%;
+  margin-block: 40%;
+
+  @media (max-width: 724px) {
+    display: none;
+  }
 `;
 
 const TopLeftBlurBackground = styled.div`

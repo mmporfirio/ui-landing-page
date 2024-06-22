@@ -1,6 +1,7 @@
 export { default as Coin } from "./Coin.png";
 export { default as LogoBrandName } from "./LogoBrandName.png";
 export { default as BabyDon } from "./BabyDon.png";
+export { default as BabyDonMobile } from "./BabyDonMobile.png";
 export { default as Baby } from "./Baby.png";
 export { default as Logo } from "./Logo.png";
 export { default as PinkSale } from "./PinkSale.png";
