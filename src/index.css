@@ -54,7 +54,7 @@ p {
   margin-block: 10px;
 }
 
-* {
+html {
   --primary-color: #2079fe;
   --paragraph-color: #a8aeb2;
   --heading-color: #f9fbfe;
