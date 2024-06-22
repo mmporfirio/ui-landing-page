@@ -85,9 +85,9 @@ const RightBlurBackground = styled.div`
   -moz-box-shadow: 10px 10px 400px 150px rgba(32, 121, 254, 0.75);
 
   border-radius: 416px;
-  z-index: -10;
+  z-index: 10;
   filter: blur(600px);
-  -webkit-filter: blur(600px);
+  -webkit-filter: blur(50px);
 `;
 
 export {

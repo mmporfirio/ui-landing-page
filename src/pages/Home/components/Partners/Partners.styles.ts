@@ -136,9 +136,9 @@ const TopLeftBlurBackground = styled.div`
   -moz-box-shadow: 10px 10px 400px 150px rgba(32, 121, 254, 0.75);
 
   border-radius: 416px;
-  z-index: -10;
+  z-index: 10;
   filter: blur(600px);
-  -webkit-filter: blur(600px);
+  -webkit-filter: blur(50px);
 `;
 
 const TopRightBlurBackground = styled.div`
@@ -160,8 +160,8 @@ const TopRightBlurBackground = styled.div`
   border-radius: 416px;
   z-index: -10;
   filter: blur(600px);
-  -webkit-filter: blur(600px);
-  z-index: -20;
+  -webkit-filter: blur(50px);
+  z-index: 10;
 `;
 
 const MiddleRightBlurBackground = styled.div`
@@ -181,10 +181,10 @@ const MiddleRightBlurBackground = styled.div`
   -moz-box-shadow: 10px 10px 200px 150px rgba(32, 121, 254, 0.75);
 
   border-radius: 416px;
-  z-index: -10;
+  z-index: 10;
+
   filter: blur(600px);
-  -webkit-filter: blur(600px);
-  z-index: -20;
+  -webkit-filter: blur(50px);
 `;
 
 const CoinImg = styled.img`

@@ -83,9 +83,9 @@ const LeftBottomBlurBackground = styled.div`
   -moz-box-shadow: 10px 10px 400px 100px rgba(32, 121, 254, 0.75);
 
   border-radius: 416px;
-  z-index: -10;
+  z-index: 10;
   filter: blur(600px);
-  -webkit-filter: blur(600px);
+  -webkit-filter: blur(50px);
 `;
 
 const RightTopBlurBackground = styled.div`
@@ -105,9 +105,9 @@ const RightTopBlurBackground = styled.div`
   -moz-box-shadow: 10px 10px 300px 100px rgba(32, 121, 254, 0.75);
 
   border-radius: 416px;
-  z-index: -10;
+  z-index: 10;
   filter: blur(600px);
-  -webkit-filter: blur(600px);
+  -webkit-filter: blur(50px);
 `;
 
 export {
