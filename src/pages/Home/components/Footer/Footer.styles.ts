@@ -45,7 +45,7 @@ const NavBar = styled.nav`
   gap: 5vw;
 `;
 
-const NavItem = styled.a`
+const NavItem = styled.button`
   font-size: clamp(0.5rem, 4vw, 1.5rem);
 
   font-weight: 400;

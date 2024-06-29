@@ -50,7 +50,9 @@ function Initial({ refProp, menuItems }: InitialProps) {
             </NavItem>
           ))}
         </NavBar>
-        <CallButton>Join now</CallButton>
+        <CallButton href="https://matheusmoreiraa.dev" target="_blank">
+          Join now
+        </CallButton>
       </HeaderContainer>
       <ContentContainer>
         <picture>
@@ -59,8 +61,15 @@ function Initial({ refProp, menuItems }: InitialProps) {
           <ContentImg src={BabyDon} alt="Baby Don Image" />
         </picture>
         <ButtonsContainer>
-          <CallButton>Join now</CallButton>
-          <AuditButton>Audit</AuditButton>
+          <CallButton href="https://matheusmoreiraa.dev" target="_blank">
+            Join now
+          </CallButton>
+          <AuditButton
+            href="https://www.linkedin.com/in/matheus-moreira-ap/?locale=en_US"
+            target="_blank"
+          >
+            Audit
+          </AuditButton>
         </ButtonsContainer>
         {COINS_POSITIONS.map((props, index) => (
           <CoinImg src={Coin} {...props} key={index} alt="" />

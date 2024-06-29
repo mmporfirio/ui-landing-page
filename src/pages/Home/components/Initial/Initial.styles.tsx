@@ -13,7 +13,7 @@ const HeaderContainer = styled.header`
 
   @media (max-width: 960px) {
     justify-content: center;
-    & > button {
+    & > a {
       display: none !important;
     }
   }
@@ -42,7 +42,7 @@ const MobileMenuContainer = styled.div`
   }
 `;
 
-const NavItem = styled.a`
+const NavItem = styled.button`
   font-size: 20px;
   font-weight: 400;
   color: var(--paragraph-color);
@@ -55,7 +55,7 @@ const LogoNameImg = styled.img`
   height: 55px;
 `;
 
-const CallButton = styled.button`
+const CallButton = styled.a`
   background: var(--primary-color);
   border-radius: 99px;
   padding: 16px 28px;
@@ -64,7 +64,7 @@ const CallButton = styled.button`
   font-size: 20px;
 `;
 
-const AuditButton = styled.button`
+const AuditButton = styled.a`
   border: 2px var(--primary-color) solid;
   background-color: transparent;
   border-radius: 99px;
