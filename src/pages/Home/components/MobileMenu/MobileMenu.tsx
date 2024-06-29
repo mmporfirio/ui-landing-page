@@ -55,7 +55,7 @@ const MobileMenu = ({ menuItems }: MobileMenuProps) => {
     >
       <InnerContainer>
         <MenuHeadContainer>
-          <LogoMenuImg src={LogoBrandName} />
+          <LogoMenuImg src={LogoBrandName} alt="Logo Baby Don" />
           <CloseButton onClick={() => setIsOpen(false)}>
             <XIcon />
           </CloseButton>

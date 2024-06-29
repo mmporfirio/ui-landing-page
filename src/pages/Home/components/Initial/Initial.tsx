@@ -63,7 +63,7 @@ function Initial({ refProp, menuItems }: InitialProps) {
           <AuditButton>Audit</AuditButton>
         </ButtonsContainer>
         {COINS_POSITIONS.map((props, index) => (
-          <CoinImg src={Coin} {...props} key={index} />
+          <CoinImg src={Coin} {...props} key={index} alt="" />
         ))}
       </ContentContainer>
       <MiddleBlurBackground />

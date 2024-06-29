@@ -21,7 +21,7 @@ function Footer({ menuItems }: FooterProps) {
         <picture>
           <source media="(min-width: 845px)" srcSet={LogoBrandName} />
           <source media="(max-width: 844px)" srcSet={Logo} />
-          <LogoBrandImg src={LogoBrandName} />
+          <LogoBrandImg src={LogoBrandName} alt="Logo Baby Don" />
         </picture>
         <NavBar>
           {menuItems.map(({ label, onClick }) => (

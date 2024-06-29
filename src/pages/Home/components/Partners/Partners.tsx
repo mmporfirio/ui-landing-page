@@ -25,17 +25,17 @@ function Partners({ refProp }: PartnersProps) {
       <h2>Partners</h2>
       <CircleContainer>
         <BabyBrandContainer>
-          <BabyImg src={Logo} />
+          <BabyImg src={Logo} alt="Logo Baby Don" />
           <BabyName>BABY DON</BabyName>
         </BabyBrandContainer>
         <InnerCircleContainer />
         {PARTNERS_LIST.map(({ src, ...props }, index) => (
           <PartnerCard {...props} key={index}>
-            <PartnerImg src={src} />
+            <PartnerImg src={src} alt={src.split("/").reverse()[0]} />
           </PartnerCard>
         ))}
       </CircleContainer>
-      <CoinImg src={Coin} />
+      <CoinImg src={Coin} alt="" />
       <TopRightBlurBackground />
       <TopLeftBlurBackground />
       <MiddleRightBlurBackground />

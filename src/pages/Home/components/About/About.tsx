@@ -20,7 +20,7 @@ function About({ refProp }: AboutProps) {
     <Container ref={refProp}>
       <h2>ABOUT BABYDON</h2>
       <ContentContainer>
-        <BabyImg src={Baby} />
+        <BabyImg src={Baby} alt="Baby Don Image" />
         <TextContainer>
           <p>
             Baby DON is set for a meteoric rise, with experts forecasting an
@@ -48,10 +48,10 @@ function About({ refProp }: AboutProps) {
             and dedication to be the #1 chain, so let's make it happen.
           </p>
         </TextContainer>
-        <BabyImg src={Baby} reverse />
+        <BabyImg src={Baby} alt="Baby Don Image" reverse />
       </ContentContainer>
       {COINS_POSITIONS.map((props, index) => (
-        <CoinImg src={Coin} {...props} key={index} />
+        <CoinImg src={Coin} {...props} key={index} alt="" />
       ))}
       <LeftBlurBackground />
       <LeftTopBlurBackground />
