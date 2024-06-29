@@ -40,10 +40,16 @@ function Footer({ menuItems }: FooterProps) {
       <FlexContainer>
         <p>© 2024 Baby Don. All rights reserved.</p>
         <FlexContainer>
-          <a>
+          <a
+            href="https://www.linkedin.com/in/matheus-moreira-ap/?locale=en_US"
+            target="_blank"
+          >
             <XIcon />
           </a>
-          <a>
+          <a
+            href="https://www.linkedin.com/in/matheus-moreira-ap/?locale=en_US"
+            target="_blank"
+          >
             <PaperPlaneIcon />
           </a>
         </FlexContainer>
