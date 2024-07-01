@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# BabyDon Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the project landing page for BabyDon, the meme coin set to skyrocket in 2024!
 
-Currently, two official plugins are available:
+## About BabyDon
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BabyDon is poised for a meteoric rise, coinciding with the anticipated 2024 elections. Experts foresee an astonishing surge, making BabyDon a standout in the meme coin universe. With strategic partnerships and a dedicated community, BabyDon aims to lead the meme coin market on Solana.
 
-## Expanding the ESLint configuration
+## Development Based on Design
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The BabyDon landing page is being developed based on the design from [Project](https://www.behance.net/gallery/198996577/Meme-coin-website?tracking_source=search_projects|landing+page&l=12&).
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Roadmap
+
+- [x] Create engaging landing page design
+- [x] Implement auto-scroll functionality
+- [x] Optimize images for faster loading
+- [x] Integrate interactive elements
+
+# Style
+
+![Color Palette](https://github.com/mmporfirio/ui-landing-page/assets/147407337/444a431e-b6e7-479e-afa3-1b8c9e10334b)
+
+# Screenshots
+
+![Example on Macbook](https://github.com/mmporfirio/ui-landing-page/assets/147407337/5587b9bd-aad2-4639-b52a-61608b268c3c)
